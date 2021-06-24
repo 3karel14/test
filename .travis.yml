@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t kmarinoinfan/node .
   - docker images kmarinoinfan/node
+
+before_deploy:
+  - docker login -u kmarinoinfan  -p Doquifereando3
+
+deploy:
+  provider: script
+  script: docker push kmarinoinfan/node
+  on:
+    branch: master
