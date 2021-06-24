@@ -7,10 +7,10 @@ script:
   - docker images kmarinoinfan/node
 
 before_deploy:
-  - docker login -u kmarinoinfan  -p Doquifereando3
+  - docker login -u kmarinoinfan -p Doquifereando3
 
 deploy:
   provider: script
   script: docker push kmarinoinfan/node
   on:
-    branch: master
+    branch: main
