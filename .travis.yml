@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t kmarinoinfan/node .
+  - docker images kmarinoinfan/node
